@@ -3,8 +3,9 @@
 
 #include "XsollaLoginLibrary.h"
 
-#include "Engine/Engine.h"
 #include "XsollaLogin.h"
+
+#include "Engine/Engine.h"
 
 UXsollaLoginLibrary::UXsollaLoginLibrary(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
@@ -19,4 +20,9 @@ UXsollaLoginController* UXsollaLoginLibrary::GetLoginController(UObject* WorldCo
 	}
 
 	return nullptr;
+}
+
+UXsollaLoginSettings* UXsollaLoginLibrary::GetLoginSettings()
+{
+	return FXsollaLoginModule::Get().GetSettings();
 }
