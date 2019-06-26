@@ -31,7 +31,7 @@ The integration demo is available in the **Content** folder. It includes authori
 
 Before using the asset, you need to set up Login in your Publisher Account (see [documentation](https://developers.xsolla.com/sdk/unity/unity-login-sdk)). For the integration you will need **Login project ID**, shown in **Login settings > Login projects** in the [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
 
-![](//https://www.evernote.com/shard/s482/sh/15f46325-6db7-4a2f-8ae1-72b77ddc0892/2fcb9e35223ca4a7/res/eaf0165f-28af-43ad-a965-735671bdcdad/skitch.png)
+![](https://www.evernote.com/shard/s482/sh/15f46325-6db7-4a2f-8ae1-72b77ddc0892/2fcb9e35223ca4a7/res/eaf0165f-28af-43ad-a965-735671bdcdad/skitch.png)
 
 ## Installing and Setting up the Plugin
 
