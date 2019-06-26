@@ -1,20 +1,22 @@
-# Login Unreal Engine SDK
+# Login UE4 SDK Plugin
 
-Login UE4 SDK is used to integrate [Xsolla Login API](https://developers.xsolla.com/api/v2/login/) methods with apps based on the [Unreal Engine](https://www.unrealengine.com/).
+Login UE4 SDK Plugin is used to integrate [Xsolla Login API](https://developers.xsolla.com/api/v2/login/) methods with apps based on the [Unreal Engine](https://www.unrealengine.com/). Main features:
+* Sign-in via login and password
+* Signup
+* Email confirmation
+* Password reset
 
 This solution works only for:
 * storing user data at Xsolla’s side
 * authentication via email/username and password
 
-Target OS:
-* iOS
-* Android
-* Linux
-* Mac OS
-* Windows 32-bit
-* Windows 64-bit
+[Unreal Marketplace](https://www.unrealengine.com/marketplace/en-US/slug/xsolla-login-sdk)
 
-**Info:** The integration demo is available in the **Content** folder. It includes authorization interface and events processing already set up. You can use it as an example.
+[Documentation](https://developers.xsolla.com/sdk/unreal-engine/unreal-engine-login-sdk)
+
+## Demo
+
+The integration demo is available in the **Content** folder. It includes authorization interface and events processing already set up. You can use it as an example.
 
 ## System Requirements
 
@@ -25,34 +27,18 @@ Target OS:
 * XCode 10.1 and higher for Mac OS
 * Unreal Engine 4.21 and higher
 
-## Integration Flow
+## Prerequisites
 
-1. Register an [Xsolla Publisher Account](https://publisher.xsolla.com).
-2. [Create](#creating-a-project) a project in your Publisher Account.
-3. [Set up](#setting-up-login) Login in your Publisher Account.
-4. [Install and set up](#installing-and-setting-up-the-plugin) the plugin for the Unreal Engine project.
-5. [Set up](#setting-up-events-processing) events processing.
+Before using the asset, you need to set up Login in your Publisher Account (see [documentation](https://developers.xsolla.com/sdk/unity/unity-login-sdk)). For the integration you will need **Login project ID**, shown in **Login settings > Login projects** in the [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
 
-### Creating a Project
-
-1. Log in to [Publisher Account](http://publisher.xsolla.com).
-2. Go to **Projects** and click **Create new project**.
-3. In setup mode, add **Project name** and click **Create**.
-4. Go to **Project settings** > **Integration settings** and check that **Tokenless integration** is disabled.
-
-### Setting up Login
-
-1. Create a new Login in your Publisher Account and specify the **Login name**.
-2. Go to **General settings** > **URL**:
-    1. Specify the **Callback URL** to redirect the user to after authentication.
-    2. Select an **Xsolla storage** in the **User data storage** block.
+![](//https://www.evernote.com/shard/s482/sh/15f46325-6db7-4a2f-8ae1-72b77ddc0892/2fcb9e35223ca4a7/res/eaf0165f-28af-43ad-a965-735671bdcdad/skitch.png)
 
 ### Installing and Setting up the Plugin
 
 1. To install the plugin from [Epic Games Launcher](https://www.epicgames.com/unrealtournament/download):
     1. Go to Epic Games Launcher > **Unreal Engine** > **Marketplace**.
     2. Find the **Xsolla Login SDK** plugin and click **Install to Engine**.
-2. To install the plugin from [GitHub](https://github.com/xsolla/login-ue4-sdk):
+2. To install the plugin from [GitHub](https://github.com/xsolla/login-ue4-sdk/releases):
     1. Download the plugin from GitHub.
     2. Go to the folder of your UE project > **Plugins** and create the **XsollaLogin** folder.
     3. Unpack the archive with the plugin to the **XsollaLogin** folder.
