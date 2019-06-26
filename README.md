@@ -33,7 +33,7 @@ Before using the asset, you need to set up Login in your Publisher Account (see 
 
 ![](//https://www.evernote.com/shard/s482/sh/15f46325-6db7-4a2f-8ae1-72b77ddc0892/2fcb9e35223ca4a7/res/eaf0165f-28af-43ad-a965-735671bdcdad/skitch.png)
 
-### Installing and Setting up the Plugin
+## Installing and Setting up the Plugin
 
 1. To install the plugin from [Epic Games Launcher](https://www.epicgames.com/unrealtournament/download):
     1. Go to Epic Games Launcher > **Unreal Engine** > **Marketplace**.
@@ -58,7 +58,7 @@ Before using the asset, you need to set up Login in your Publisher Account (see 
 |User data storage      |The storage to save user data to. Must be 'Xsolla storage'.|
 |JWT validation URL     |Server URL to validate the JWT on your side. **Required** if you want to [validate JWT](#jwt-validation) additionally.|
 
-### Setting up Events Processing
+## Setting up Events Processing
 
 **Info:** Events are key actions that a user performs during the authentication process.
 
@@ -81,9 +81,9 @@ You can also use your own authorization interface and set up your own project’
 4. Add and set up **Xsolla Login SDK nodes** described below.
 5. Compile the Blueprint/C++ class and play the level.
 
-#### Xsolla Login SDK Nodes
+### Xsolla Login SDK Nodes
 
-**Registrate User**
+**Register User**
 
 Adds a new user to the database. 
 
