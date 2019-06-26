@@ -1,4 +1,4 @@
-# Login UE4 SDK Plugin
+# Xsolla Login UE4 SDK Plugin
 
 Login UE4 SDK Plugin is used to integrate [Xsolla Login API](https://developers.xsolla.com/api/v2/login/) methods with apps based on the [Unreal Engine](https://www.unrealengine.com/). Main features:
 * Sign-in via login and password
