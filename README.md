@@ -70,7 +70,7 @@ Target OS:
 |Login project ID       |Login ID from your Publisher Account. **Required.**        |
 |Callback URL           |URL to redirect the user to after registration/authentication/password reset. Must be identical to the **Callback URL** specified in Publisher Account in Login settings. **Required if there are several Callback URLs.**|
 |User data storage      |The storage to save user data to. Must be 'Xsolla storage'.|
-|JWT validation URL     |Server URL to validate the JWT on your side. **Required** if you want to [validate JWT](#jwt-validation) additionally.|
+|JWT validation URL     |Server URL to validate the JWT on your side. **Required** if you want to have custom JWT validation.|
 
 ### Setting up Events Processing
 
@@ -190,35 +190,3 @@ Resets the user password. The user will receive a password change verification [
 <details><summary>Example</summary>
   <img src="Documentation/req_reset.png"></img>
 </details>
-
-## JWT Validation
-
-A [JWT](https://jwt.io/introduction/) is generated for each successfully authenticated user. This value is signed by the secret key encrypted according to the SHA-256 algorithm. You can set up JWT validation using Firebase. Follow the instructions below:
-1. Create the [Firebase](https://firebase.google.com/) project.
-2. Install [Node.JS](https://nodejs.org/en/).
-3. Install the **firebase-tools** package:
-```
-$ npm install -g firebase-tools
-```
-**Note:** If the package could not get access to system files, try to reinstall Node.JS following the [instruction](https://treehouse.github.io/installation-guides/mac/node-mac.html).
-
-4. Open console:
-    1. *If the plugin is installed from Epic Games Launcher*, go to the folder with UE installed > **Engine** > **Plugins** > **Marketplace** > **XsollaLogin** > **Extras** > **TokenVerificator**.
-    2. *If the plugin is installed from GitHub*, go to the UE project > **Plugins** > **XsollaLogin** > **Extras** > **TokenVerificator**. 
-5. Run the following command: 
-```
-$ firebase login
-```
-6. Specify your Firebase authentication data in a browser.
-7. Go back to the **TokenVerificator** folder, open the *.firebaserc* file, and check that the **Firebase Project ID** is correct. **Note:** If you could not find the *.firebaserc* file, set up the display of hidden files on your PC.
-8. Go back to the **TokenVerificator** folder > **functions**.
-    1. Open the *config.json* file and paste your secret key. You can find it in your **Publisher Account > Login settings > General settings**.  
-    2. Install the xsolla-jwt script to the Firebase project:
-    ```
-    $ npm install
-    $ npm run deploy
-    ```
-    3. Copy the URL from the console.
-9. Open your UE project in Unreal Editor, go to **Settings** > **Project Settings** > **Plugins** > **Xsolla Login SDK** and paste the copied URL to the **JWT validation URL** field.
-
-**Note:** Login SDK automatically validates and updates the JWT value on the Xsolla’s server. 
